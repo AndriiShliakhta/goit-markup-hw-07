@@ -1,19 +1,135 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+:root {
+  --transition-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo, .benefits-list__subtitle, .services-list__subtittle, .social-container, .subscribe-container__label {
+  font-weight: 700;
+  line-height: 1.17;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #757575;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.section-title {
+  color: #212121;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.buttons {
+  cursor: pointer;
+  border: 0;
+  font-size: 16px;
+}
+
+.subtitle {
+  color: #212121;
+}
+
+.section,
+.header,
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+}
+
 /* Хедер */
+.navigation-container,
+.contacts-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header {
   border-bottom: 1px solid #ececec;
 }
 
 .header > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 24px 0;
 }
 
 .navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 93px;
 }
 
 .navigation-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 50px;
   position: relative;
 }
@@ -23,6 +139,15 @@
 }
 
 .contacts-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 50px;
 }
 
@@ -48,6 +173,12 @@
 .navigation-list__link::after {
   content: '';
   display: none;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   width: 100%;
   height: 4px;
   background-color: #2196f3;
@@ -57,6 +188,15 @@
 }
 
 .contacts-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   line-height: 1.14;
   color: #757575;
   fill: #757575;
@@ -74,6 +214,12 @@
 
 .active-page::after {
   display: block;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
 }
 
 .contacts-list__icon-envelope {
@@ -91,8 +237,6 @@
 .logo {
   font-family: "Raleway", "Roboto", "Arial", sans-serif;
   font-size: 26px;
-  line-height: 1.17;
-  font-weight: 700;
   text-decoration: none;
 }
 
@@ -145,8 +289,20 @@
 }
 
 /* Преимущиства */
-.benefits-section {
+.section.benefits-section {
   padding-bottom: 0;
+}
+
+.benefits-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .benefits-list__item {
@@ -161,6 +317,12 @@
 
 .benefits-list__item::before {
   display: block;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   content: '';
   height: 120px;
   background-size: contain;
@@ -187,8 +349,6 @@
 
 .benefits-list__subtitle {
   font-size: 14px;
-  font-weight: 700;
-  line-height: 1.17;
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 10px;
@@ -199,6 +359,18 @@
 }
 
 /* Услуги компании */
+.services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .services-list__item {
   position: relative;
   margin-left: 30px;
@@ -210,11 +382,26 @@
 
 .services-list__image {
   display: block;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   max-width: 100%;
   height: auto;
 }
 
 .services-list__subtittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 70px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8)));
@@ -224,9 +411,7 @@
   left: 0;
   color: #ffffff;
   font-size: 14px;
-  line-height: 1.17;
   text-transform: uppercase;
-  font-weight: 700;
 }
 
 /* Работники компании */
@@ -238,6 +423,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
 }
 
 .team-list__item {
@@ -266,11 +457,26 @@
 
 .team-list__image {
   display: block;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   max-width: 100%;
   height: auto;
 }
 
 .social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 30px;
 }
 
@@ -283,6 +489,15 @@
 }
 
 .social-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #ffffff;
   border-radius: 50%;
   width: 44px;
@@ -319,6 +534,18 @@
 }
 
 /* Постоянные клиенты */
+.clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .clients-list__item + .clients-list__item {
   margin-left: 30px;
 }
@@ -327,6 +554,12 @@
   width: 170px;
   height: 92px;
   display: block;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   fill: #afb1b8;
   border: 2px solid #afb1b8;
   border-radius: 4px;
@@ -352,6 +585,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
 }
 
 .footer-address {
@@ -370,8 +606,6 @@
 .social-container {
   margin-left: 70px;
   color: #ffffff;
-  line-height: 1.17;
-  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -385,10 +619,14 @@
 
 .subscribe-container__label {
   display: block;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   color: #ffffff;
   font-size: 14px;
-  line-height: 1.17;
-  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -409,14 +647,20 @@
 
 .subscribe-container__button {
   display: inline-block;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   line-height: 1.875;
   padding: 10px 28px;
   margin-left: 12px;
+  color: #ffffff;
   background-color: #2196f3;
   border-radius: 4px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: #ffffff;
   border: none;
   font-size: 16px;
   letter-spacing: 0.06em;
@@ -468,12 +712,24 @@
 
 .modal-form__label {
   display: block;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   position: relative;
   margin-bottom: 10px;
 }
 
 .modal-form__input {
   display: block;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   width: 100%;
   padding: 11px 41px;
   border-radius: 4px;
@@ -511,6 +767,15 @@
 }
 
 .modal-form__checkbox-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 14px;
   line-height: 1.71;
   margin: 10px 0 30px 14px;
@@ -549,7 +814,12 @@
 
 .modal-form__button {
   display: block;
-  line-height: 1.875;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   padding: 10px 55px;
   width: 200px;
   margin: auto;
@@ -562,10 +832,20 @@
   font-size: 16px;
   letter-spacing: 0.06em;
   font-weight: 700;
+  line-height: 1.875;
   cursor: pointer;
 }
 
 .modal .button-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: right;
   position: absolute;
   top: 8px;
@@ -576,15 +856,6 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   cursor: pointer;
 }
 
@@ -602,6 +873,12 @@
 /* Страница портфолио */
 .portfolio-section {
   display: block;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
 }
 
 .portfolio-section .container {
@@ -633,6 +910,18 @@
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.portfolio-btn-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+}
+
 .portfolio-btn-list__item {
   margin-left: 8px;
 }
@@ -642,6 +931,15 @@
 }
 
 .projects-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: -30px;
@@ -661,6 +959,12 @@
 
 .projects-list__image {
   display: block;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
   max-width: 100%;
   height: auto;
 }
@@ -715,113 +1019,5 @@
   font-size: 16px;
   line-height: 1.9;
   margin-top: 4px;
-}
-
-/* Общие стили */
-:root {
-  --transition-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.navigation-container,
-.contacts-list, .header > .container, .navigation-list, .benefits-list, .services-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.services-list__subtittle, .social-list, .social-list__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.navigation-list__item, .contacts-list__item, .contacts-list__link, .clients-list, .modal-form__checkbox-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.portfolio-btn-list, .projects-list, .section,
-.header,
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  list-style: none;
-}
-
-body {
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #757575;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-
-h1,
-h2,
-h3,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-.header__link,
-.services-list__item,
-.projects-list__link {
-  text-decoration: none;
-}
-
-.section-title {
-  color: #212121;
-  text-align: center;
-  font-weight: 700;
-  font-size: 36px;
-  margin-bottom: 50px;
-}
-
-.buttons {
-  cursor: pointer;
-  border: 0;
-  font-size: 16px;
-}
-
-.subtitle {
-  color: #212121;
-}
-
-.section {
-  padding: 94px 0;
-}
-
-.container {
-  width: 1200px;
-  padding: 0 15px;
 }
 /*# sourceMappingURL=main.css.map */

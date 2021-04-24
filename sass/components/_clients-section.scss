@@ -1,6 +1,6 @@
 /* Постоянные клиенты */
 .clients-list {
-  @extend %verticalCenter;
+  @include centered(flex, inherit, center);
 }
 
 .clients-list__item + .clients-list__item {
@@ -10,7 +10,7 @@
 .clients-list__icon {
   width: 170px;
   height: 92px;
-  display: block;
+  @include centered(block, inherit, inherit);
   fill: #afb1b8;
   border: 2px solid #afb1b8;
   border-radius: 4px;

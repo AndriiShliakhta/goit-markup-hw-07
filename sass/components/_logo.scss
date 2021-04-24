@@ -1,8 +1,7 @@
 .logo {
+  @extend %boldSubtitle;
   font-family: $raleway;
   font-size: 26px;
-  line-height: 1.17;
-  font-weight: 700;
   text-decoration: none;
 
   &--blue-part {

@@ -1,10 +1,10 @@
 /* Преимущиства */
-.benefits-section {
+.section.benefits-section {
   padding-bottom: 0;
 }
 
 .benefits-list {
-  @extend %spaceBetweenCenter;
+  @include centered(flex, space-between, center);
 }
 
 .benefits-list__item {
@@ -16,7 +16,7 @@
   }
 
   &::before {
-    display: block;
+    @include centered(block, inherit, inherit);
     content: '';
     height: 120px;
     background-size: contain;
@@ -25,24 +25,16 @@
     margin-bottom: 30px;
   }
 
-  &:nth-child(1)::before {
-    background-image: url('../images/Group1.svg');
-  }
-  &:nth-child(2)::before {
-    background-image: url('../images/Group2.svg');
-  }
-  &:nth-child(3)::before {
-    background-image: url('../images/Group3.svg');
-  }
-  &:nth-child(4)::before {
-    background-image: url('../images/Group4.svg');
+  @each $group in 1, 2, 3, 4 {
+    &:nth-child(#{$group})::before {
+      background-image: url('../images/Group#{$group}.svg');
+    }
   }
 }
 
 .benefits-list__subtitle {
+  @extend %boldSubtitle;
   font-size: 14px;
-  font-weight: 700;
-  line-height: 1.17;
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 10px;

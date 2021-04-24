@@ -1,6 +1,6 @@
 /* Страница портфолио */
 .portfolio-section {
-  display: block;
+  @include centered(block, inherit, inherit);
 }
 
 .portfolio-section .container {
@@ -32,7 +32,7 @@
 }
 
 .portfolio-btn-list {
-  @extend %horizontalCenter;
+  @include centered(flex, center, inherit);
 }
 
 .portfolio-btn-list__item {

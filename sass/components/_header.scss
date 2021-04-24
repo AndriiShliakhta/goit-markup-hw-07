@@ -2,24 +2,24 @@
 
 .navigation-container,
 .contacts-list {
-  @extend %spaceBetweenCenter;
+  @include centered(flex, space-between, center);
 }
 
 .header {
   border-bottom: 1px solid #ececec;
 }
 .header > .container {
-  @extend %spaceBetweenCenter;
+  @include centered(flex, space-between, center);
   margin: 24px 0;
 }
 
 .navigation-list {
-  @extend %spaceBetweenCenter;
+  @include centered(flex, space-between, center);
   margin-left: 93px;
 }
 
 .navigation-list__item {
-  @extend %verticalCenter;
+  @include centered(flex, inherit, center);
   margin-left: 50px;
   position: relative;
 
@@ -29,7 +29,7 @@
 }
 
 .contacts-list__item {
-  @extend %verticalCenter;
+  @include centered(flex, inherit, center);
   margin-left: 50px;
 
   &:first-child {
@@ -53,7 +53,7 @@
 
   &::after {
     content: '';
-    display: none;
+    @include centered(none, inherit, inherit);
     width: 100%;
     height: 4px;
     background-color: $accent-color;
@@ -64,7 +64,7 @@
 }
 
 .contacts-list__link {
-  @extend %verticalCenter;
+  @include centered(flex, inherit, center);
   line-height: 1.14;
   color: $primery-text-color;
   fill: $primery-text-color;
@@ -80,7 +80,7 @@
   color: $accent-color;
 
   &::after {
-    display: block;
+    @include centered(block, inherit, inherit);
   }
 }
 

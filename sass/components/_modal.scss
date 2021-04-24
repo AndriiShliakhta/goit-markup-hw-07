@@ -29,13 +29,13 @@
 }
 
 .modal-form__label {
-  display: block;
+  @include centered(block, inherit, inherit);
   position: relative;
   margin-bottom: 10px;
 }
 
 .modal-form__input {
-  display: block;
+  @include centered(block, inherit, inherit);
   width: 100%;
   padding: 11px 41px;
   border-radius: 4px;
@@ -71,7 +71,7 @@
 }
 
 .modal-form__checkbox-label {
-  @extend %verticalCenter;
+  @include centered(flex, inherit, center);
   font-size: 14px;
   line-height: 1.71;
   margin: 10px 0 30px 14px;
@@ -107,8 +107,7 @@
 }
 
 .modal-form__button {
-  display: block;
-  line-height: 1.875;
+  @include centered(block, inherit, inherit);
   padding: 10px 55px;
   width: 200px;
   margin: auto;
@@ -120,10 +119,12 @@
   font-size: 16px;
   letter-spacing: 0.06em;
   font-weight: 700;
+  line-height: 1.875;
   cursor: pointer;
 }
 
 .modal .button-close {
+  @include centered(flex, center, center);
   text-align: right;
   position: absolute;
   top: 8px;
@@ -134,9 +135,6 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
 }
 .button-close__icon {

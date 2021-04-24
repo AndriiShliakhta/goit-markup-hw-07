@@ -1,5 +1,5 @@
 .social-list {
-  @extend %centerCenter;
+  @include centered(flex, center, center);
   margin-bottom: 30px;
 
   &--margin {
@@ -10,7 +10,7 @@
   margin-left: 10px;
 }
 .social-list__link {
-  @extend %centerCenter;
+  @include centered(flex, center, center);
   background-color: $white-color;
   border-radius: 50%;
   width: 44px;
