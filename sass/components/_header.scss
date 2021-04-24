@@ -1,90 +1,89 @@
 /* Хедер */
 
-.header > .container,
 .navigation-container,
-.navigation-list,
-.contacts-list,
-.benefits-list,
-.services-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.contacts-list {
+  @extend %spaceBetweenCenter;
 }
 
 .header {
   border-bottom: 1px solid #ececec;
 }
-
 .header > .container {
+  @extend %spaceBetweenCenter;
   margin: 24px 0;
 }
 
 .navigation-list {
+  @extend %spaceBetweenCenter;
   margin-left: 93px;
 }
 
-.navigation-list__item,
-.contacts-list__item {
+.navigation-list__item {
+  @extend %verticalCenter;
   margin-left: 50px;
-  display: flex;
-  align-items: center;
-}
-.navigation-list__item:first-child,
-.contacts-list__item:first-child {
-  margin-left: 0;
+  position: relative;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
-.logo {
-  font-family: $raleway;
-  font-size: 26px;
-  line-height: 1.17;
-  font-weight: 700;
-}
-.header .logo {
-  color: $header-logo-color;
+.contacts-list__item {
+  @extend %verticalCenter;
+  margin-left: 50px;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .header__link {
   font-weight: 500;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
-.navigation-list__item {
-  position: relative;
-}
+
 .navigation-list__link {
   color: $section-title-color;
   line-height: 1.17;
   transition: color var(--transition-function);
-}
-.navigation-list__link::after {
-  content: '';
-  display: none;
-  width: 100%;
-  height: 4px;
-  background-color: $accent-color;
-  position: absolute;
-  bottom: -32px;
-  left: 0;
+
+  &::after {
+    content: '';
+    display: none;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+  }
 }
 
-.active-page::after {
-  display: block;
-}
 .contacts-list__link {
+  @extend %verticalCenter;
   line-height: 1.14;
   color: $primery-text-color;
   fill: $primery-text-color;
-  display: inline-flex;
-  align-items: center;
   transition: color var(--transition-function), fill var(--transition-function);
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
-.header__link:hover,
-.header__link:focus,
-.mail-phone:hover,
-.mail-phone:focus,
-.active-page,
-.logo .logo--blue-part {
+
+.active-page {
   color: $accent-color;
+
+  &::after {
+    display: block;
+  }
 }
+
 .contacts-list__icon-envelope {
   width: 16px;
   height: 12px;
@@ -94,8 +93,4 @@
   width: 10px;
   height: 16px;
   margin-right: 10px;
-}
-.contacts-list__link:hover,
-.contacts-list__link:focus {
-  fill: $accent-color;
 }

@@ -1,8 +1,6 @@
 /* Постоянные клиенты */
 .clients-list {
-  display: flex;
-  list-style: none;
-  justify-content: center;
+  @extend %verticalCenter;
 }
 
 .clients-list__item + .clients-list__item {
@@ -17,8 +15,9 @@
   border: 2px solid #afb1b8;
   border-radius: 4px;
   transition: fill var(--transition-function), border var(--transition-function);
-}
-.clients-list__icon:hover {
-  fill: $accent-color;
-  border: 2px solid $accent-color;
+
+  &:hover {
+    fill: $accent-color;
+    border: 2px solid $accent-color;
+  }
 }
